@@ -266,4 +266,20 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+# other format
+.vscode
+ckpt/*
+assets/*masks
+assets/*mp4
+# assets/*zip
+assets/*gif
+*.pyc
+debug
+cym_utils
+/src
+/tracking_results
+/aot/results
+/aot/pretrain_models
+/aot/datasets
+
 # End of https://www.toptal.com/developers/gitignore/api/windows,macos,linux,python,visualstudiocode
