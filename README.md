@@ -20,7 +20,7 @@ Please check the dependency requirements in SAM and DeAOT.
 
 The implementation is tested under python 3.9, as well as pytorch 1.11.0+cu113 and torchvision 0.12.0+cu113 We recommend equivalent or higher pytorch version.
 
-Use the install.sh to install the necessary libs for SAM-Track
+Use the install.sh to install the necessary libs for SAM-Track-Inpainting
 
 ```
 bash script/install.sh
