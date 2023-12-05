@@ -200,7 +200,7 @@ def seg_track_app():
         gr.Markdown(
             '''
             <div style="text-align:center;">
-                <span style="font-size:3em; font-weight:bold;">🖌06_Inpainter🩵</span>
+                <span style="font-size:3em; font-weight:bold;">🖌06_INPAINTERZ🩵</span>
             </div>
             '''
         )
