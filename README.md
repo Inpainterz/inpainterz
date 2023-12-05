@@ -1,5 +1,11 @@
 # inpainterz
 
+# Introduction
+
+We worked on a video inpainting project.
+
+Inspired by yamy-cheng's Segment-and-Track-Anything and Paper99's E2FGVI, this is a project you can try out in your UI to get hands-on experience with the video inpainting challenge. 
+
 # Getting Started
 
 🎮Conda Default Environment
