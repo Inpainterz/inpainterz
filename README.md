@@ -36,7 +36,7 @@ Online Demo: (colab link), Project presentation: (team ppt)
 **inpainterz의 파이프라인**은 **SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅 합니다. 
 
 <p align="center">
-<img src="assets/readme00.png" width="880">
+<img src="assets/readme00.png" width="720">
 </p>
 
 
@@ -62,10 +62,8 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 	
 	SAM의 Prompt Encoder와 Mask Decoder는 **가볍고 빠르다**.
 	같은 이미지 임베딩이 여러 개의 프롬프트와 함께 재사용되기 때문에, CPU 환경의 웹 상에서 50ms 이하의 속도로 Mask를 예측할 수 있다.
-	<p align="center">
-	<video width="720" controls>
-	<source src="assets/readme02.mp4" type="video/mp4">
-	</video>
+	<p align="center">	
+	<img src="assets/readme02.gif" width="720">
 	</p>
 
 3. **Data** ( Segment Anythin Data Engine, SA-1B Dataset )
@@ -107,7 +105,9 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
     1. **이전 단계에서 발생한 오류가** 누적되어 후속단계에서 증폭되어 **최종 성능에 큰 영향을 미침**
     2. **복잡한 수작업 연산**을 해야하지만, GPU acceleration으로 처리할 수 없어 **많은 시간이 소요**
 
-![[readme04.png]]
+	<p align="center">	
+	<img src="assets/readme04.png" width="720">
+	</p>
 
 **E2FGVI** (개선된 모델 Fig. Ours, ) 
 - 문제점을 보완, 이전 방법과 다르게 ‘공동으로’(**End-to-End**) 최적화 할 수 있어 보다 효율적이고 효과적인 인페인팅 프로세스 구현 가능
