@@ -51,7 +51,9 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 1. **Task** ( Promptable Segmentation Task )
 	Segment Anything Task의 핵심은 **프롬프팅이 가능**하다는 것이다.
 	원하는 영역의 **Point**나 **Box** 또는 **자연어**, (+ **Mask**)로 구성된 프롬프트를 입력하면, 아무리 모호한 정보일지라도 유효한 Segmentation Mask를 출력한다.
-	![[readme01.png]]
+	<p align="center">
+	<img src="assets/readme01.png" width="720">
+	</p>
 2. **Model** ( Segment Anything Model, SAM )
 	이를 위한 모델인 SAM은 **두 개의 인코더**와 **하나의 디코더**로 구성된다.
 	Image Encoder와 Prompt Encoder로부터 온 임베딩 정보를 매핑해 Mask Decoder가 예측된 Segmentation Mask를 출력하는 구조다. 
@@ -60,12 +62,16 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 	
 	SAM의 Prompt Encoder와 Mask Decoder는 **가볍고 빠르다**.
 	같은 이미지 임베딩이 여러 개의 프롬프트와 함께 재사용되기 때문에, CPU 환경의 웹 상에서 50ms 이하의 속도로 Mask를 예측할 수 있다.
-	![[readme02.mp4]]
+	<p align="center">
+	<img src="assets/readme02.mp4" width="720">
+	</p>
 	 >
 3. **Data** ( Segment Anythin Data Engine, SA-1B Dataset )
 	Foundation 모델 개발에 있어 가장 중요한 것은 대규모 데이터셋이다.
 	Segment Anything은 자체적인 **Data Engine**을 개발했고, 그 결과 10억 개의 Mask를 가진 **SA-1B** 데이터셋이 탄생했다.
-	![[readme03.png]]
+	<p align="center">
+	<img src="assets/readme03.png" width="720">
+	</p>
 
 ### DeAOT
 (Decoupling features in Associating Objects with Transformers) [**Paper**](https://arxiv.org/abs/2210.09782)
