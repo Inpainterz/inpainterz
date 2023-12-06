@@ -63,9 +63,11 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 	SAM의 Prompt Encoder와 Mask Decoder는 **가볍고 빠르다**.
 	같은 이미지 임베딩이 여러 개의 프롬프트와 함께 재사용되기 때문에, CPU 환경의 웹 상에서 50ms 이하의 속도로 Mask를 예측할 수 있다.
 	<p align="center">
-	<img src="assets/readme02.mp4" width="720">
+	<video width="720" controls>
+	<source src="assets/readme02.mp4" type="video/mp4">
+	</video>
 	</p>
-	 >
+
 3. **Data** ( Segment Anythin Data Engine, SA-1B Dataset )
 	Foundation 모델 개발에 있어 가장 중요한 것은 대규모 데이터셋이다.
 	Segment Anything은 자체적인 **Data Engine**을 개발했고, 그 결과 10억 개의 Mask를 가진 **SA-1B** 데이터셋이 탄생했다.
