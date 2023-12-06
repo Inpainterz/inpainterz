@@ -35,7 +35,9 @@ Online Demo: (colab link), Project presentation: (team ppt)
 
 **inpainterz의 파이프라인**은 **SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅 합니다. 
 
-![[readme00.png]]
+<p align="center">
+<img src="assets/readme00.png" width="880">
+</p>
 
 
 ## **Summary** of the algorithms used
