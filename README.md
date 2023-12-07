@@ -87,7 +87,7 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 4. **Gated Propagation Module (GPM)**: DeAOT에서는 효율성을 높이기 위해 단일 헤드 주의를 기반으로 설계된 GPM을 사용합니다. GPM은 자체 전파, 장기 전파, 단기 전파의 세 가지 종류의 게이트 전파를 포함합니다​​.
 
 1. **네트워크 세부 사항과 트레이닝**: DeAOT는 다양한 인코더와 동일한 FPN 디코더를 사용합니다. GPM 모듈은 시각적 및 ID 임베딩의 차원을 지정하고, 학습은 정적 이미지 데이터셋에서 생성된 합성 비디오 시퀀스와 VOS 벤치마크에서 수행됩니다​​.
-2. **결론**: DeAOT는 계층적 VOS 전파를 위한 효율적인 프레임워크를 제공합니다. 이는 계층적 전파에서 시각적 및 ID 임베딩을 분리하여 깊은 전파 계층에서의 시각 정보 손실을 방지합니다. 또
+2. **결론**: DeAOT는 계층적 VOS 전파를 위한 효율적인 프레임워크를 제공합니다. 이는 계층적 전파에서 시각적 및 ID 임베딩을 분리하여 깊은 전파 계층에서의 시각 정보 손실을 방지합니다. 
 
 ### E2FGVI
 (End-to-End Framework for Flow-Guided Video Inpainting) [**Paper**](https://arxiv.org/abs/2204.02663)
@@ -124,12 +124,13 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 ## Inpainterz PJT Review
 
 ### 구성한 App의 한계점
-- 
-- 
+- 빠르게 움직이는 대상과 대상에 간섭이 지속적으로 이루어지는 경우 memory를 놓칩니다. (가령, 댄스 영상)
+- 경계가 뚜렷하지 않은 객체(벽의 균열)등을 inpainting하고자 하는 경우 잘 동작되지 않습니다.
+  
 ### 회고 및 개선가능한 방향들
-- 
-- 
-- 
+- 이미지의 첫 단에 등장하는 객체가 아닌 중간이나 끝에 삽입되는 객체를 기억하는 알고리즘
+- SOTA inpainting 알고리즘을 적용하여 더 자연스러운 객체 제거할 수 있습니다.
+
 
 
 
@@ -139,7 +140,6 @@ Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data
 ```shell
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
 pip install mmcv-full==1.4.8 -f https://download.openmmlab.com/mmcv/dist/cu113/torch1.11/index.html
-bash script/install.sh
 pip install gradio==3.39
 pip install av
 pip install gdown
@@ -182,9 +182,6 @@ pip install gdown
 SAM, DeAOT는 상업적 이용까지 가능한 오픈소스입니다.
 
 하지만 E2FGVI는 상업적으로는 이용할 수 없기에 추가확인하시기 바랍니다.
-
-
-
 
 
 
