@@ -190,3 +190,5 @@ SAM, DeAOT는 상업적 이용까지 가능한 오픈소스입니다.
 This repository is maintained by **Inpainterz** [강도성]() and [경소현](), [변웅진](), [손수진](), [지경호]()
 
 This code is based on [SAM](), [DeAOT](), [SAMTrack](), and [E2FGVI]().
+
+Inspired by [Facebookresearch](https://github.com/facebookresearch/segment-anything), [z-x-yang](https://github.com/z-x-yang/Segment-and-Track-Anything), and [MCG-NKU](https://github.com/MCG-NKU/E2FGVI).
