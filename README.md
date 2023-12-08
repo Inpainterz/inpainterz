@@ -44,7 +44,7 @@ Online Demo: (colab link), Project presentation: (team ppt)
 **inpainterz**에서 사용한 알고리즘에 대한 내용을 요약했다. 
 ### SAM 
 (Segment Anything Model) **[Paper](https://ai.meta.com/research/publications/segment-anything/)**
-대규모 데이터셋이 구축되지 않았던 기존의 Segmentation 작업은 매번 학습에 소요되는 시간과 그 비용이 너무 크다는 문제가 있었다. 어쩌면 LLM과 같이 **Zero-shot** 학습 방식을 취하는 모델이 있지 않을까 생각을 하였고, 2023년 4월 Meta에서 Image Segmentation계의 **Foundation** 모델을 만드는 것을 목표로 프로젝트를 발표했다. ? 
+대규모 데이터셋이 구축되지 않았던 기존의 Segmentation 작업은 매번 학습에 소요되는 시간과 그 비용이 너무 크다는 문제가 있었다. LLM과 같이 **Zero-shot** 학습 방식을 취하는 모델, 2023년 4월 Meta에서 Image Segmentation계의 **Foundation** 모델을 만드는 것을 목표로 프로젝트를 발표했다. ??
 
 Meta는 다음 세 가지를 새롭게 선보였다. **Task**, **Model**, **Data**.
 1. **Task** ( Promptable Segmentation Task )
