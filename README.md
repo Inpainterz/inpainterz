@@ -138,7 +138,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 - 70개의 프레임 기준으로 이 크기의 비디오 하나를 완성하는 데에 약 4분 소요. E2FGVI는 프레임당 0.12초로 약 8.4초 소요.
  
 ----------------------------
-## Inpainterz Project Review
+## Review
 
 ### 구성한 App의 한계점
 - 빠르게 움직이는 대상과 대상에 간섭이 지속적으로 이루어지는 경우 memory를 놓친다. (e.g. 댄스 영상)
@@ -193,7 +193,7 @@ bash script/download_ckpt.sh
 ```
 
     
-## License
+## License ❗️
 오픈소스를 지향합니다. 
 
 SAM, DeAOT는 상업적 이용까지 가능한 오픈소스입니다.
@@ -201,7 +201,7 @@ SAM, DeAOT는 상업적 이용까지 가능한 오픈소스입니다.
 하지만 E2FGVI는 상업적으로는 이용할 수 없기에 추가 확인을 하시기 바랍니다.
 
 	
-## Acknowledgement
+## Acknowledgement 🧐
 This repository is maintained by **Inpainterz** [강도성](https://github.com/kang952175) and  [경소현](https://github.com/SohyeonGyeong) ,[변웅진](https://github.com/1ncarnati0n), [손수진](https://github.com/Soosembly),  [지경호](https://github.com/zkhshub)
 
 This code is based on [SAM](https://github.com/facebookresearch/segment-anything), [DeAOT](https://github.com/z-x-yang/AOT), [SAMTrack](https://github.com/z-x-yang/Segment-and-Track-Anything), and [E2FGVI](https://github.com/MCG-NKU/E2FGVI).
