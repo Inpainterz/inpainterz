@@ -44,8 +44,8 @@ _그 결과를 오픈소스 프로젝트로 정리했습니다._
 </p>
 
 
-## **Summary** of the algorithms used
-inpainterz**에서 사용한 알고리즘에 대한 내용을 요약했습니다. 
+## **Summary** of The Algorithms Used
+inpainterz에서 사용한 알고리즘에 대한 내용을 요약했습니다.
 ### SAM 
 (Segment Anything Model) **[Paper](https://ai.meta.com/research/publications/segment-anything/)**
 
