@@ -1,6 +1,5 @@
 
-# Inpainterz
--------------------------------
+# Inpainterz\
 Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), Project presentation: (team ppt)
 
 
