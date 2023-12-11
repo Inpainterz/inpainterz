@@ -46,9 +46,9 @@ _그 결과를 오픈소스 프로젝트로 정리했습니다._
 </p>
 
 
-### **Summary** of The Algorithms Used
+## Summary of Used Algorithms
 inpainterz에서 사용한 알고리즘에 대한 내용을 요약했습니다.
-#### SAM 
+### SAM 
 (Segment Anything Model) **[Paper](https://ai.meta.com/research/publications/segment-anything/)**
 
 대규모 데이터셋이 구축되지 않았던 기존의 Segmentation 작업은 매번 학습에 소모되는 시간과 비용이 너무 크다는 문제가 있었습니다. NLP 분야의 LLM처럼, **Zero-shot**이 가능한 모델을 만들수 없을까 했고, 2023년 4월 Meta에서는 Image Segmentation계의 **Foundation** 모델을 만드는 것을 목표로 이 모델을 발표했습니다.
@@ -79,7 +79,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 	<img src="assets/readme03.png" width="480">
 	</p>
 
-#### DeAOT
+### DeAOT
 (Decoupling features in Associating Objects with Transformers) [**Paper**](https://arxiv.org/abs/2210.09782)
 
 기존의 AOT 방법을 개선하여, 객체에 구애받지 않는 시각적, 객체별 특징을 독립적인 두 분기에서 처리, Dual independent branches propagation를 위한 효율적인 모듈인 Gated Propagation Module(GPM)을 도입하여 hierarchical propagation을 구성합니다​​.
@@ -99,7 +99,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 5. **결론**: 
    DeAOT는 계층적 VOS 전파를 위한 효율적인 프레임워크를 제공. 이는 계층적 전파에서 시각적 및 ID 임베딩을 분리하여 깊은 전파계층에서의 시각 정보 손실을 방지.
 
-#### E2FGVI
+### E2FGVI
 (End-to-End Framework for Flow-Guided Video Inpainting) [**Paper**](https://arxiv.org/abs/2204.02663)
 
 **비디오 인페인팅**
@@ -139,7 +139,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 
 - 70개의 프레임 기준으로 이 크기의 비디오 하나를 완성하는 데에 약 4분 소요. E2FGVI는 프레임당 0.12초로 약 8.4초 소요.
  
-----------------------------
+
 ## Review
 
 ### 구성한 App의 한계점
