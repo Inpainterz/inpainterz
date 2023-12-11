@@ -48,7 +48,7 @@ _그 결과를 오픈소스 프로젝트로 정리했습니다._
 <img src="assets/readme00.png" width="720">
 </p>
 
----------------------------------------------
+
 ## **Summary** of the algorithms used
 inpainterz**에서 사용한 알고리즘에 대한 내용을 요약했습니다. 
 ### SAM 
@@ -57,7 +57,7 @@ inpainterz**에서 사용한 알고리즘에 대한 내용을 요약했습니다
 대규모 데이터셋이 구축되지 않았던 기존의 Segmentation 작업은 매번 학습에 소모되는 시간과 비용이 너무 크다는 문제가 있었습니다. NLP 분야의 LLM처럼, **Zero-shot**이 가능한 모델을 만들수 없을까 했고, 2023년 4월 Meta에서는 Image Segmentation계의 **Foundation** 모델을 만드는 것을 목표로 이 모델을 발표했습니다.
 
 Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, **Data**.
-1. **Task** ( Promptable Segmentation Task )
+1. **Task** ( Promptable Segmentation Task )\
 	Segment Anything Task의 핵심은 **프롬프팅이 가능**하다는 것.
 	원하는 영역의 **Point**나 **Box** 또는 **자연어**, (+ **Mask**)로 구성된 프롬프트를 입력하면, 아무리 모호한 정보일지라도 유효한 Segmentation Mask를 출력한다.
 	<p align="center">
@@ -201,9 +201,6 @@ bash script/install.sh
 ```
 bash script/download_ckpt.sh
 ```
- 
-
-
 
     
 ## License
@@ -213,10 +210,7 @@ SAM, DeAOT는 상업적 이용까지 가능한 오픈소스입니다.
 
 하지만 E2FGVI는 상업적으로는 이용할 수 없기에 추가 확인을 하시기 바랍니다.
 
- 
- 
- 
- 
+	
 ## Acknowledgement
 This repository is maintained by **Inpainterz** [강도성](https://github.com/kang952175) and  [경소현](https://github.com/SohyeonGyeong) ,[변웅진](https://github.com/1ncarnati0n), [손수진](https://github.com/Soosembly),  [지경호](https://github.com/zkhshub)
 
