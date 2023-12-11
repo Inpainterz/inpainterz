@@ -1,5 +1,5 @@
 
-# Inpainterz\
+# Inpainterz
 Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), Project presentation: (team ppt)
 
 
@@ -17,8 +17,8 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 
 _그 결과를 오픈소스 프로젝트로 정리했습니다._
 
--------
 
+-----------------------------------
 
 🎥 비디오를 인페인팅 하는 과정은 다음과 같이 정리할 수 있습니다.
 
@@ -31,16 +31,18 @@ _그 결과를 오픈소스 프로젝트로 정리했습니다._
    
 **2. *동영상 인페인팅***\
    **Inpainting**\
-   Input 값으로 Masking된 영상을 넣으면 복원해야하는 누락된 지점으로 인식한다. 이 과정에서 알고리즘은 주변의 픽셀 정보로 누락된 부분의 색상과 텍스쳐 등을 추정하고 채운다.
+   Input 값으로 Masking된 영상을 넣으면 복원해야하는 누락된 지점으로 인식한다. 이 과정에서 알고리즘은 주변의 픽셀 정보로 누락된 부분의 색상과 텍스처 등을 추정하고 채운다.
 
 **3. *결과 확인 및 수정***\
-   Inpainting된 결과를 확인하고, 품질을 향상 시키기 위해 추가적인 Task를 수행한다.
+   Inpainting된 결과를 확인하고, 품질을 향상시키기 위해 추가적인 Task를 수행한다.
 
 
 🎲 **inpainterz의 파이프라인**은 \
-**SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅 합니다. 
+**SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅합니다. 
 
-주요 알고리즘으로는 제로샷러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything)과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI)으로 인페인팅을 하는 workflow이며 gradio를 이용해 GUI를 구성했습니다.
+
+
+**주요 알고리즘**으로는 제로샷러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything)과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI)으로 인페인팅을 하는 workflow이며 gradio를 이용해 GUI를 구성했습니다.
 
 <p align="center">
 <img src="assets/readme00.png" width="720">
