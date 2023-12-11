@@ -4,7 +4,8 @@
 Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), Project presentation: (team ppt)
 
 
-**Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다. 
+**Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다.
+
 **연계기업**으로부터 **인페인팅기술**에 대한 **선행연구개발** 주제를 받아 진행하였습니다.
 
 🚀 Team Members
@@ -15,9 +16,6 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 > [지경호](https://github.com/zkhshub)
 
 그 결과를 오픈소스 프로젝트로 정리했습니다. 
-
-
-주요 알고리즘으로는 제로샷 러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything) 과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI) 으로 인페인팅을 하는 Workflow이며 gradio를 이용해 GUI를 구성하였습니다.
 
 
 🎥 비디오를 인페인팅 하는 과정은 다음과 같이 정리할 수 있습니다.
@@ -38,10 +36,12 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 
 
 
-🎥 **inpainterz의 파이프라인**은 **SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅 합니다. 
+🎲 **inpainterz의 파이프라인**은 **SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅 합니다. 
+
+주요 알고리즘으로는 제로샷 러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything) 과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI) 으로 인페인팅을 하는 Workflow이며 gradio를 이용해 GUI를 구성하였습니다.
 
 <p align="center">
-<img src="assets/readme00.png" width="480">
+<img src="assets/readme00.png" width="720">
 </p>
 
 
