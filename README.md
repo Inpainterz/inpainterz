@@ -55,13 +55,13 @@ inpainterz에서 사용한 알고리즘에 대한 내용을 요약했습니다.
 
 Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, **Data**.
 1. **Task** ( Promptable Segmentation Task )\
-	Segment Anything Task의 핵심은 **프롬프팅이 가능**하다는 것.
+	Segment Anything Task의 핵심은 **프롬프팅이 가능**하다는 것.\
 	원하는 영역의 **Point**나 **Box** 또는 **자연어**, (+ **Mask**)로 구성된 프롬프트를 입력하면, 아무리 모호한 정보일지라도 유효한 Segmentation Mask를 출력한다.
 	<p align="center">
 	<img src="assets/readme01.png" width="480">
 	</p>
  
-2. **Model** ( Segment Anything Model, SAM )
+2. **Model** ( Segment Anything Model, SAM )\
 	이를 위한 모델인 SAM은 **두 개의 인코더**와 **하나의 디코더**로 구성.
 	Image Encoder와 Prompt Encoder로부터 온 임베딩 정보를 매핑해 Mask Decoder가 예측된 Segmentation Mask를 출력하는 구조다.\
 	Mask Decoder는 Transformer의 Decoder를 조금 수정한 것으로, 이미지 임베딩과 프롬프트 임베딩을 모두 업데이트 하기 위해 **Self-Attention**과 **Cross-Attention**을 양방향으로 활용한다.\
@@ -71,7 +71,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 	<img src="assets/readme02.gif" width="480">
 	</p>
 
-3. **Data** ( Segment Anythin Data Engine, SA-1B Dataset )
+3. **Data** ( Segment Anythin Data Engine, SA-1B Dataset )\
 	Foundation 모델 개발에 있어 가장 중요한 것은 대규모 데이터셋이다.\
 	Segment Anything은 자체적인 **Data Engine**을 개발했고, 그 결과 10억 개의 Mask를 가진 **SA-1B** 데이터셋이 탄생했다.
 
