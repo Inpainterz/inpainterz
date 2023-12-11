@@ -5,7 +5,7 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 
 
 **Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다.\
-**연계기업**으로부터 **인페인팅기술**에 대한 **선행연구개발** 주제를 받아 진행하였습니다.\
+**연계기업**으로부터 **인페인팅기술**에 대한 **선행연구개발** 주제를 받아 진행하였습니다.
 
 
 🚀 Team Members
@@ -16,31 +16,30 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 > [지경호](https://github.com/zkhshub)
 
 
-그 결과를 오픈소스 프로젝트로 정리했습니다. \
-\
+그 결과를 오픈소스 프로젝트로 정리했습니다.
+
 
 🎥 비디오를 인페인팅 하는 과정은 다음과 같이 정리할 수 있습니다.
 
 **1. *동영상 마스킹***\
    **Segmentation** & **Masking**\
-   동영상에서 인페인팅 할 객체를 선택하고 정확하게 판별(분리)하기 위해, Segmentation 기법을 사용.\
-   해당 부분이 누락된 것처럼 분할된 객체를 Masking하여, 인페인팅 알고리즘이 수행할 수 있게 한다. 
+   동영상에서 인페인팅할 객체를 선택하고 정확하게 판별(분리)하기 위해, Segmentation 기법을 사용.\
+   해당 부분이 누락된 것처럼 분할된 객체를 Masking하여, 인페인팅 알고리즘이 수행할 수 있게 한다.\
    **Tracking**, use **Long-term Memory**\   
-   Long-term Memory으로 Masking된 객체가 특정 프레임 내에서 따라 움직이는 것을 연속적으로 Tracking & Masking을 수행하여 동영상 내에 모든 마스킹 이미지를 추출한다. \
+   Long-term Memory으로 Masking된 객체가 특정 프레임 내에서 따라 움직이는 것을 연속적으로 Tracking & Masking을 수행하여 동영상 내에 모든 마스킹 이미지를 추출한다.
    
 **2. *동영상 인페인팅***\
    **Inpainting**\
-   Input 값으로 Masking된 영상을 넣으면 복원 해야하는 누락된 지점으로 인식한다. 이 과정에서 알고리즘은 주변의 픽셀 정보로 누락된 부분의 색상과 텍스쳐 등을 추정하고 채운다. \
+   Input 값으로 Masking된 영상을 넣으면 복원해야하는 누락된 지점으로 인식한다. 이 과정에서 알고리즘은 주변의 픽셀 정보로 누락된 부분의 색상과 텍스쳐 등을 추정하고 채운다.
 
 **3. *결과 확인 및 수정***\
    Inpainting된 결과를 확인하고, 품질을 향상 시키기 위해 추가적인 Task를 수행한다.
-\
-\
+
 
 🎲 **inpainterz의 파이프라인**은 \
 **SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅 합니다. 
 
-주요 알고리즘으로는 제로샷 러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything) 과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI) 으로 인페인팅을 하는 Workflow이며 gradio를 이용해 GUI를 구성하였습니다.
+주요 알고리즘으로는 제로샷러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything)과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI)으로 인페인팅을 하는 workflow이며 gradio를 이용해 GUI를 구성했습니다.
 
 <p align="center">
 <img src="assets/readme00.png" width="720">
