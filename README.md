@@ -24,7 +24,7 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 
    **Segmentation** & **Masking**
    
-   동영상에서 인페인팅 할 객체를 선택하고 정확하게 판별(분리)하기 위해, Segmentation 기법을 사용. /
+   동영상에서 인페인팅 할 객체를 선택하고 정확하게 판별(분리)하기 위해, Segmentation 기법을 사용.\
    해당 부분이 누락된 것처럼 분할된 객체를 Masking하여, 인페인팅 알고리즘이 수행할 수 있게 한다. 
    **Tracking**, use **Long-term Memory**
    
