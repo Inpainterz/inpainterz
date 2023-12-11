@@ -13,10 +13,10 @@ If there are no objects or areas in the first frame that you want to inpaint, yo
 ## 1. Upload your video
 Upload your video in one of the two ways 'A' or 'B' below.
 ### A. Drag a file into a block
- <p align="center"><img src="./img/first frame load.gif" alt="first frame load by drag"/> </p>
+ <p align="center"><img src="./img/first frame load.gif" width = "600" height = "600" alt="first frame load by drag"/> </p>
 
 ### B. Click the block to upload a test video
-<p align="center"><img src="./img/click upload.gif" alt="click first frame load by click"/> </p>
+<p align="center"><img src="./img/click upload.gif" width = "600" height = "600" alt="click first frame load by click"/> </p>
 
 
 ## 2. Segment the area you want using SAM
@@ -26,10 +26,10 @@ The segment-anything model (called SAM) comes into play, automatically marking a
 Click the desired area as precisely as possible until all the desired areas are displayed.
 
 In our example, we want to erase the logo, so we mark the logo on the clothing as an area.
-<p align="center"><img src="./img/samclick.gif" alt="sam click"/> </p>
+<p align="center"><img src="./img/samclick.gif" width = "600" height = "600" alt="sam click"/> </p>
 
 We'll discuss specific parameter settings and buttons within the **Click tab** in more detail below.
-<p align="center"><img src="./img/CLICK TAB.png" alt="sam click tab"/> </p>
+<p align="center"><img src="./img/CLICK TAB.png" width = "400" height = "400" alt="sam click tab"/> </p>
 
 
 ## 3. Segment-and-Track-Anything using DeAOT
@@ -40,12 +40,12 @@ It then creates a video of the masked frames and previews them in the top right.
 You can watch this video to see if the region is masked well.
 
 
-<p align="center"><img src="./img/sam tracking.gif" alt="sam tracking"/> </p>
+<p align="center"><img src="./img/sam tracking.gif" width = "600" height = "600" alt="sam tracking"/> </p>
 
 ## 4. Inpainting using E2FGVI
 Check the masked video and if the area is well masked, press the **[start inpainting!]** button.
 
-<p align="center"><img src="./img/inpainting.gif" alt="sam tracking"/> </p>
+<p align="center"><img src="./img/inpainting.gif" width = "600" height = "600" alt="sam tracking"/> </p>
 
 ## 5. Download
 You can download three materials here.
