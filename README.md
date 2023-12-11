@@ -1,6 +1,7 @@
 
 # Inpainterz
-Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), Project presentation:[![Static Badge](https://img.shields.io/badge/report_ppt-pdf)](https://drive.google.com/file/d/1hxLa4slGEpYmksW7buqUlffHuAftYZ3d/view?usp=sharing)
+Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), 
+Project PPT:[![Static Badge](https://img.shields.io/badge/report_ppt-pdf)](https://drive.google.com/file/d/1hxLa4slGEpYmksW7buqUlffHuAftYZ3d/view?usp=sharing)
 
 
 **Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다.\
