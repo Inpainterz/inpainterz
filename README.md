@@ -2,10 +2,8 @@
 # Inpainterz
 Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), Project presentation: (team ppt)
 
-
 **Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다.\
 **연계기업**으로부터 **인페인팅기술**에 대한 **선행연구개발** 주제를 받아 진행하였습니다.
-
 
 🚀 Team Members
 > [강도성](https://github.com/kang952175) 
@@ -14,12 +12,9 @@ Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-bad
 > [손수진](https://github.com/Soosembly)
 > [지경호](https://github.com/zkhshub)
 
-
 _그 결과를 오픈소스 프로젝트로 정리했습니다._
-	
 
- 	
------------------------------------
+----------------------------
 
 🎥 비디오를 인페인팅 하는 과정은 다음과 같이 정리할 수 있습니다.
 
@@ -40,7 +35,6 @@ _그 결과를 오픈소스 프로젝트로 정리했습니다._
 
 🎲 **inpainterz의 파이프라인**은\
 **SAM**이 새로운 오브젝트를 동적으로 자동감지하고 세분화할 수 있도록 지원하며, **DeAOT**는 식별된 모든 오브젝트를 추적하는 역할을 담당합니다. 결과적으로 **E2FGVI**는 추적되어 마스킹된 비디오 영상들을 인페인팅합니다. 
-
 
 
 ⭐️ **주요 알고리즘**으로는 제로샷러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything)과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI)으로 인페인팅을 하는 workflow이며 gradio를 이용해 GUI를 구성했습니다.
@@ -64,30 +58,29 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 	<p align="center">
 	<img src="assets/readme01.png" width="480">
 	</p>
+ 
 2. **Model** ( Segment Anything Model, SAM )
 	이를 위한 모델인 SAM은 **두 개의 인코더**와 **하나의 디코더**로 구성.
-	Image Encoder와 Prompt Encoder로부터 온 임베딩 정보를 매핑해 Mask Decoder가 예측된 Segmentation Mask를 출력하는 구조다. 
-	
-	Mask Decoder는 Transformer의 Decoder를 조금 수정한 것으로, 이미지 임베딩과 프롬프트 임베딩을 모두 업데이트 하기 위해 **Self-Attention**과 **Cross-Attention**을 양방향으로 활용한다.
-	
-	SAM의 Prompt Encoder와 Mask Decoder는 **가볍고 빠르다**.
+	Image Encoder와 Prompt Encoder로부터 온 임베딩 정보를 매핑해 Mask Decoder가 예측된 Segmentation Mask를 출력하는 구조다.\
+	Mask Decoder는 Transformer의 Decoder를 조금 수정한 것으로, 이미지 임베딩과 프롬프트 임베딩을 모두 업데이트 하기 위해 **Self-Attention**과 **Cross-Attention**을 양방향으로 활용한다.\
+	SAM의 Prompt Encoder와 Mask Decoder는 **가볍고 빠르다**.\
 	같은 이미지 임베딩이 여러 개의 프롬프트와 함께 재사용되기 때문에, CPU 환경의 웹 상에서 50ms 이하의 속도로 Mask를 예측할 수 있다.
 	<p align="center">	
 	<img src="assets/readme02.gif" width="480">
 	</p>
 
 3. **Data** ( Segment Anythin Data Engine, SA-1B Dataset )
-	Foundation 모델 개발에 있어 가장 중요한 것은 대규모 데이터셋이다.
+	Foundation 모델 개발에 있어 가장 중요한 것은 대규모 데이터셋이다.\
 	Segment Anything은 자체적인 **Data Engine**을 개발했고, 그 결과 10억 개의 Mask를 가진 **SA-1B** 데이터셋이 탄생했다.
+
 	<p align="center">
 	<img src="assets/readme03.png" width="480">
 	</p>
 
- 
 ### DeAOT
 (Decoupling features in Associating Objects with Transformers) [**Paper**](https://arxiv.org/abs/2210.09782)
 
-기존의 AOT 방법을 개선하여, 객체에 구애받지 않는 시각적, 객체별 특징을 독립적인 두 분기에서 처리, Dual independent branches propagation를 위한 효율적인 모듈인 Gated Propagation Module (GPM)을 도입하여 hierarchical propagation을 구성합니다​​.
+기존의 AOT 방법을 개선하여, 객체에 구애받지 않는 시각적, 객체별 특징을 독립적인 두 분기에서 처리, Dual independent branches propagation를 위한 효율적인 모듈인 Gated Propagation Module(GPM)을 도입하여 hierarchical propagation을 구성합니다​​.
 
 1. **VOS의 정의와 배경**
 	VOS는 주어진 비디오에서 하나 또는 여러 객체를 인식하고 분할하는 중요한 비디오 이해 작업입니다. 이 연구는 알고리즘이 초기 프레임에서 주어진 객체의 마스크를 기반으로 전체 비디오 시퀀스에 걸쳐 객체를 추적하고 분할해야 하는 반감독 VOS에 중점을 둡니다​​.
@@ -95,23 +88,22 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 2. **DeAOT의 주요 구성**
 	DeAOT는 두 가지 분기, 즉 시각적 분기와 ID 분기로 구성. 시각적 분기는 객체를 일치시키고 과거의 시각 정보를 수집하며 객체 특징을 정제하는 역할. ID 분기는 시각적 분기에서 계산된 일치 맵(attention map)을 재사용하여 과거 프레임에서 현재 프레임으로 ID 임베딩을 전파​​.
 
-3. **Gated Propagation Module (GPM)**: DeAOT에서는 효율성을 높이기 위해 Single Head attention을 기반으로 설계된 GPM을 사용합니다. GPM은 자체전파, 장기전파, 단기전파의 세 가지 종류의 게이트 전파를 포함.
+3. **Gated Propagation Module (GPM)**
+	DeAOT에서는 효율성을 높이기 위해 Single Head attention을 기반으로 설계된 GPM을 사용합니다. GPM은 자체전파, 장기전파, 단기전파의 세 가지 종류의 게이트 전파를 포함.
 
 4. **네트워크 세부사항, 트레이닝**
    DeAOT는 다양한 인코더와 동일한 FPN 디코더를 사용합니다. GPM 모듈은 시각적 및 ID 임베딩의 차원을 지정하고, 학습은 정적 이미지 데이터셋에서 생성된 합성 비디오 시퀀스와 VOS 벤치마크에서 수행됩니다​​.
 
 5. **결론**: 
    DeAOT는 계층적 VOS 전파를 위한 효율적인 프레임워크를 제공. 이는 계층적 전파에서 시각적 및 ID 임베딩을 분리하여 깊은 전파계층에서의 시각 정보 손실을 방지.
- 
- 
- 
+
 ### E2FGVI
 (End-to-End Framework for Flow-Guided Video Inpainting) [**Paper**](https://arxiv.org/abs/2204.02663)
 
 **비디오 인페인팅**
 목표는 비디오 클립 전체에서 ‘손상된’ 영역을 그럴듯하고 일관된 콘텐츠로 채우는 것, 하지만 남은 과제로 복잡한 비디오 시나리오와 저하된 비디오 프레임에 관한 문제가 있으며. 이는 고품질 비디오 인페인팅을 위해서는 **공간적 구조**와 **시간적 일관성**을 모두 고려해야 함을 의합니다.
 
-**기존방법: Flow-based methods**
+1. **기존방법: Flow-based methods**
 - 이런 일반적인 흐름기반 방법(flow-based method)는 인페인팅을 **pixel propagation** 문제로 생각하여 시간적 일관성을 자연스럽게 보존
 
 	1. flow completion : 
@@ -131,7 +123,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 	<img src="assets/readme04.png" width="480">
 	</p>
 
-**개선모델: E2FGVI** (Fig.Ours) 
+2. **개선모델: E2FGVI** (Fig.Ours) 
 - 이전 모델을 보완, 이전 방법과 다르게 **End-to-End**로 최적화 할 수 있어 보다 효율적이고 효과적인 인페인팅 프로세스 구현 가능
 	
 	1. **Flow-Completion** 모듈: 	
@@ -145,9 +137,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 
 - 70개의 프레임 기준으로 이 크기의 비디오 하나를 완성하는 데에 약 4분 소요. E2FGVI는 프레임당 0.12초로 약 8.4초 소요.
  
-
-  
-----------------------------------
+----------------------------
 ## Inpainterz Project Review
 
 ### 구성한 App의 한계점
@@ -159,11 +149,10 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 - SOTA inpainting 알고리즘을 적용하여 더 자연스러운 객체 제거할 수 있다.
 
 
-----------------------------------
  
  
 ## 🎮 Getting Started
-**1. Conda Default Environment**
+**1. Conda Default Environment** 🎾
 
 ```shell
 pip install torch==1.11.0+cu113 torchvision==0.12.0+cu113 torchaudio==0.11.0 --extra-index-url https://download.pytorch.org/whl/cu113
@@ -174,7 +163,7 @@ pip install av
 pip install gdown
 ```
 
-**2. Requirements**
+**2. Requirements** 🗝️
 - The Segment-Anything repository has been cloned and renamed as sam, and the aot benchmark repository has been cloned and renamed as aot.
 
 - Please check the dependency requirements in SAM and DeAOT and E2FGVI.
@@ -186,7 +175,7 @@ pip install gdown
 bash script/install.sh
 ```
 
-⭐ **3. Model Preparation**
+**3. Model Preparation** ⚙️
 - Download **SAM** model to **ckpt**, the default model is SAM-VIT-B (sam_vit_b_01ec64.pth).
   
 - Download **DeAOT/AOT** model to **ckpt**, 
