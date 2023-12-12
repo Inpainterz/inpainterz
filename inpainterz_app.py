@@ -200,7 +200,7 @@ def seg_track_app():
         gr.Markdown(
             '''
             <div style="text-align:center;">
-                <span style="font-size:3em; font-weight:bold;">🖌06_INPAINTERZ🩵</span>
+                <span style="font-size:3em; font-weight:bold;">🖌INPAINTERZ🩵</span>
             </div>
             '''
         )
@@ -252,7 +252,7 @@ def seg_track_app():
                             
                             with gr.Accordion("SegTracker Args", open=False):
                                 points_per_side = gr.Number(
-                                    label = "points_per_side(1~100)",
+                                    label = "points_per_side (1~100)",
                                     value = 50,
                                     interactive=True
                                 )
