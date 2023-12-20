@@ -199,7 +199,27 @@ bash script/install.sh
 ```
 bash script/download_ckpt.sh
 ```
-
+## Overall packages
+```Markdown
+\inpainterz
+	⎣ \E2FGVI
+	⎣ \Pytorch-Correlation-extension
+	⎣ \aot
+	⎣ \assets
+	⎣ \ckpt
+	⎣ \groundingdino
+		⎣ \config
+		⎣ \datasets
+		⎣ \models
+		⎣ \util	
+	⎣ \sam
+	⎣ \script
+	⎣ \sam
+	⎣ \script
+	⎣ \src
+	⎣ \tool
+	⎣ \tutorial
+```
     
 ## License ❗️
 오픈소스를 지향합니다. 
