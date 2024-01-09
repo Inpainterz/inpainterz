@@ -1,10 +1,10 @@
 
 # Inpainterz
-Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://drive.google.com/file/d/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX/view?usp=sharing), 
-Project PPT:[![Static Badge](https://img.shields.io/badge/report_ppt-pdf)](https://drive.google.com/file/d/1hxLa4slGEpYmksW7buqUlffHuAftYZ3d/view?usp=sharing)
+Online Demo:[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1cQLFl2z5iOI9iZDcn4hSZ4zMU7bUu9NX), 
+Project PPT:[![Static Badge](https://img.shields.io/badge/report_ppt-pdf)](https://drive.google.com/file/d/1QtrXoP2Ny8CYVx314VeXlj5KS7QdsAx9/view?usp=drive_link)
 
 
-**Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다.\
+**Inpainterz**는 2023년 이어드림스쿨3기에서 진행된 기업연계 프로젝트입니다. \
 **연계기업**으로부터 **인페인팅기술**에 대한 **선행연구개발** 주제를 받아 진행하였습니다.
 
 🚀 Team Members
@@ -13,6 +13,11 @@ Project PPT:[![Static Badge](https://img.shields.io/badge/report_ppt-pdf)](https
 > [변웅진](https://github.com/1ncarnati0n)
 > [손수진](https://github.com/Soosembly)
 > [지경호](https://github.com/zkhshub)
+>
+> Supported by [(주)**커넥트브릭**](https://connectbrick.com/) 
+> <p align="center"> <img src="assets/readme00.png" width="960"> </p>
+> 
+
 
 _그 결과를 오픈소스 프로젝트로 정리했습니다._
 
@@ -44,7 +49,7 @@ _그 결과를 오픈소스 프로젝트로 정리했습니다._
 ⭐️ **주요 알고리즘**으로는 제로샷러닝 및 비젼에서의 파운데이션 모델로 선보인 Meta의 [**SAM**(Segment Anything Models)](https://github.com/facebookresearch/segment-anything)과 효율적인 Multi-Object Track 그리고 Propagation를 위한 [**DeAOT**(Decoupling features in Associating Objects with Transformers)](https://github.com/yoxu515/aot-benchmark)(NeurIPS2022)그리고 [**E2FGVI** (End-to-End Framework for Flow-Guided Video Inpainting)](https://github.com/MCG-NKU/E2FGVI)으로 인페인팅을 하는 workflow이며 gradio를 이용해 GUI를 구성했습니다.
 
 <p align="center">
-<img src="assets/readme00.png" width="960">
+<img src="readme00.png" width="960">
 </p>
 
 
@@ -60,7 +65,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 	Segment Anything Task의 핵심은 **프롬프팅이 가능**하다는 것.\
 	원하는 영역의 **Point**나 **Box** 또는 **자연어**, (+ **Mask**)로 구성된 프롬프트를 입력하면, 아무리 모호한 정보일지라도 유효한 Segmentation Mask를 출력한다.
 	<p align="center">
-	<img src="assets/readme01.png" width="480">
+	<img src="/assets/readme01.png" width="480">
 	</p>
  
 2. **Model** ( Segment Anything Model, SAM )\
@@ -155,7 +160,7 @@ Meta는 다음 세 가지를 새롭게 선보였습니다. **Task**, **Model**, 
 
 ### 회고 및 개선가능한 방향들
 - 이미지의 첫 단에 등장하는 객체가 아닌 중간이나 끝에 삽입되는 객체를 기억하는 알고리즘이다.
-- SOTA inpainting 알고리즘을 적용하여 더 자연스러운 객체 제거할 수 있다.
+- SOTA inpainting 알고리즘을 적용하여 더 자연스러운 객체 제거를 할 수 있다.
 
 
  
