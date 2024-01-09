@@ -15,7 +15,7 @@ Project PPT:[![Static Badge](https://img.shields.io/badge/report_ppt-pdf)](https
 > [지경호](https://github.com/zkhshub)
 >
 > Supported by [(주)**커넥트브릭**](https://connectbrick.com/) 
-> <p align="center"> <img src="assets/connectbrick.png" width="360"> </p>
+> <p align="left"> <img src="assets/connectbrick.png" width="360"> </p>
 > 
 
 
